@@ -20,10 +20,14 @@ if [ ! -d ${BUILD_LIB} ]; then
 fi
 
 # Install 
-install ${ROOT}/OrangePiTesting.sh ${BUILD}
+install ${ROOT}/EthernetAuto.sh ${BUILD}
+install ${ROOT}/USBAuto.sh ${BUILD}
 install ${ROOT}/OrangePiTesting/* ${BUILD_LIB}
 
 # Create link
-if [ ! -f ${BUILD}/OrangePiTest ]; then
-    ln -s ${BUILD}/OrangePiTesting.sh ${BUILD}/OrangePiTest
+if [ ! -f ${BUILD}/EthernetTest ]; then
+    ln -s ${BUILD}/EthernetAuto.sh ${BUILD}/EthernetTest
+fi
+if [ ! -f ${BUILD}/USBTest ]; then
+    ln -s ${BUILD}/USBAuto.sh ${BUILD}/USBTest
 fi
