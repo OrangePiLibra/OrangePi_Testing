@@ -20,4 +20,6 @@ ROOT="/usr/local/sbin/"
 
 Ethernet_Testing
 
-#USB_Testing
+USB_Testing
+
+exit 0

@@ -17,11 +17,11 @@ function LED()
     
     while [ ${_sloop} = 1 ]
     do
-        echo "0" > /sys/class/gpio/$1
+        echo "0" > $1
 
         sleep .10
 
-        echo "1" > /sys/class/gpio/$1
+        echo "1" > $1
     done    
 }
 
@@ -34,7 +34,7 @@ function USB_Testing()
         mkdir -p ${USB_MOUNT_PATH}
     fi
 
-    if [ ! -f /dev/sda ]; then
+    if [ -f /dev/sda ]; then
         mount /dev/sda ${USB_MOUNT_PATH}
     fi
 
