@@ -15,14 +15,7 @@ function LED()
 {
     local _sloop=1
     
-    while [ ${_sloop} = 1 ]
-    do
-        echo "0" > $1
-
-        sleep .10
-
-        echo "1" > $1
-    done    
+    echo "1" > $1
 }
 
 # If USB plug, LED on
