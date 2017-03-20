@@ -27,11 +27,11 @@ function USB_Testing()
         mkdir -p ${USB_MOUNT_PATH}
     fi
 
-    if [ -f /dev/sda ]; then
+    if [ -b /dev/sda ]; then
         mount /dev/sda ${USB_MOUNT_PATH}
     fi
 
-    while [ ${__sloop} = 1 ]
+    while [ ${_sloop} = 1 ]
     do
         echo "USB NNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
         if [ -f ${USB_FILE_PATH} ]; then
