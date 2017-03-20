@@ -11,9 +11,9 @@
 
 LIBDIR=${ROOT}/OrangePiTesting
 
-LED1_PATH=
+LED1_PATH=/sys/class/gpio_sw/PL10/data
 
-LED2_PATH=
+LED2_PATH=/sys/class/gpio_sw/PA15/data
 
 USB_MOUNT_PATH=/media/orangepi
 
