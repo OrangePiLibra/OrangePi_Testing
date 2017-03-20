@@ -30,6 +30,14 @@ function USB_Testing()
 {
     local _sloop=1
     
+    if [ ! -d ${USB_MOUNT_PATH} ]; then
+        mkdir -p ${USB_MOUNT_PATH}
+    fi
+
+    if [ ! -f /dev/sda ]; then
+        mount /dev/sda ${USB_MOUNT_PATH}
+    fi
+
     while [ ${__sloop} = 1 ]
     do
         echo "USB NNNNNNNNNNNNNNNNNNNNNNNNNNNNN"
