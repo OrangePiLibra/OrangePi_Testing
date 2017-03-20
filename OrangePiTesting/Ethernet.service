@@ -1,0 +1,9 @@
+[Unit]
+Description=OrangePi Ethernet Auto Test
+
+[Service]
+ExecStart=/usr/local/sbin/EthernetTest
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

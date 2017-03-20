@@ -1,0 +1,9 @@
+[Unit]
+Description=OrangePi USB Auto Test
+
+[Service]
+ExecStart=/usr/local/sbin/USBTest
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -15,7 +15,7 @@ LED1_PATH=/sys/class/gpio_sw/PL10/data
 
 LED2_PATH=/sys/class/gpio_sw/PA15/data
 
-USB_MOUNT_PATH=/media/orangepi
+USB_MOUNT_PATH=/media/usb
 
 USB_FILE_PATH=${USB_MOUNT_PATH}/OrangePi.txt
 

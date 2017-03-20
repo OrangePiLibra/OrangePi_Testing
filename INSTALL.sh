@@ -22,7 +22,10 @@ fi
 # Install 
 install ${ROOT}/EthernetAuto.sh ${BUILD}
 install ${ROOT}/USBAuto.sh ${BUILD}
-install ${ROOT}/OrangePiTesting/* ${BUILD_LIB}
+install ${ROOT}/OrangePiTesting/FUNCTION.sh ${BUILD_LIB}
+install ${ROOT}/OrangePiTesting/Import.sh ${BUILD_LIB}
+install ${ROOT}/OrangePiTesting/Ethernet.service /etc/systemd/
+install ${ROOT}/OrangePiTesting/USBTest.service /etc/systemd/
 
 # Create link
 if [ ! -f ${BUILD}/EthernetTest ]; then
@@ -31,3 +34,7 @@ fi
 if [ ! -f ${BUILD}/USBTest ]; then
     ln -s ${BUILD}/USBAuto.sh ${BUILD}/USBTest
 fi
+
+# Start system 
+systemctl enable /etc/systemd/Ethernet.service
+systemctl enable /etc/systemd/USBTest.service
